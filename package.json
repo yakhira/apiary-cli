@@ -1,0 +1,31 @@
+{
+  "name": "apiary-cli-rky",
+  "version": "1.0.0",
+  "description": "Command line tool for apiary.io",
+  "main": "index.js",
+  "scripts": {
+    "server": "node tests/server.js",
+    "test": "./node_modules/.bin/jasmine tests/integration.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yakhira/apiary-cli.git"
+  },
+  "keywords": [
+    "apiary.io"
+  ],
+  "author": "Ruslan Iakhin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yakhira/apiary-cli/issues"
+  },
+  "homepage": "https://github.com/yakhira/apiary-cli#readme",
+  "dependencies": {
+    "commander": "^2.15.1",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "jasmine": "^3.1.0",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2"
+  }
+}

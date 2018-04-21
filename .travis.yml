@@ -1,0 +1,16 @@
+language: node_js
+node_js: 7
+
+before_install:
+  - npm i -g makeshift && makeshift -s @bcoe -r registry.npmjs.org
+  
+script:
+  - npm run server &
+  - npm run test
+
+deploy:
+  provider: npm
+  email: ${NPM_EMAIL}
+  api_key: ${NPM_TOKEN}
+  on:
+    branch: master
