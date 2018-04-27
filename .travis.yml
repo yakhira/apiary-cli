@@ -5,8 +5,7 @@ before_install:
   - npm i -g makeshift && makeshift -s @bcoe -r registry.npmjs.org
   
 script:
-  - npm run server &
-  - npm run test
+  - ./test.sh
 
 deploy:
   provider: npm

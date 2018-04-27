@@ -28,6 +28,5 @@ $ npm install -g apiary-cli-rky
 
 #### Tests
 ```bash
-$ npm run server &
-$ npm run test
+$ ./test.sh
 ```
