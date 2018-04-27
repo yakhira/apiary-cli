@@ -6,33 +6,33 @@ var apiary = require('../src/apiary');
 
 program
     .description('Apiary client tool')
-    .option('-h, --host [host]', 'Apiary host', 'https://api.apiary.io')
+    .option('-s, --server [server]', 'Apiary server', 'https://api.apiary.io')
 program
     .command('get-token <username> <password>')
     .description('Get users token')
     .action(async (username, password) => {
-        var api = new apiary(program.host);
+        var api = new apiary(program.server);
         console.log(await api.getToken(username, password));
     })
 program
     .command('gen-token <username> <password>')
     .description('Generate users token')
     .action(async (username, password) => {
-        var api = new apiary(program.host);
+        var api = new apiary(program.server);
         console.log(await api.genToken(username, password));
     })
 program
     .command('get-apis <token>')
     .description('Get api list')
     .action(async (token) => {
-        var api = new apiary(program.host);
+        var api = new apiary(program.server);
         console.log(await api.getApiList(token));
     });
 program
     .command('publish-bp <path> <token> <payload>')
     .description('Publish blueprint')
     .action(async (path, token, payload) => {
-        var api = new apiary(program.host);
+        var api = new apiary(program.server);
         if(fs.existsSync(payload)){
             var body = fs.readFileSync(payload);
             console.log(await api.publishBlueprint(path, token, body));

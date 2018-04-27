@@ -15,7 +15,7 @@ $ npm install -g apiary-cli-rky
 
   Options:
 
-    -h, --host [host]                    Apiary host (default: https://api.apiary.io)
+    -s, --server [server]                Apiary server (default: https://api.apiary.io)
     -h, --help                           output usage information
 
   Commands:
