@@ -4,8 +4,7 @@
   "description": "Command line tool for apiary.io",
   "main": "index.js",
   "scripts": {
-    "server": "node tests/server.js",
-    "test": "./node_modules/.bin/jasmine tests/integration.js"
+    "test": "sh test.sh"
   },
   "repository": {
     "type": "git",

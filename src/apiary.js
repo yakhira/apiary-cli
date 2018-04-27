@@ -13,7 +13,8 @@ class Apiary {
             return JSON.parse(response);
         }
         catch(err){
-            return JSON.parse(err.error);
+            console.log(err);
+            return {error: err.error};
         }
     }
 
@@ -25,10 +26,11 @@ class Apiary {
                     body: body
                 }
             ).auth(null, null, true, token);
-            return JSON.parse(response);
+            return response;
         }
         catch(err){
-            return err.error;
+            console.log(err);
+            return {error: err.error};
         }
     }
 
@@ -44,7 +46,8 @@ class Apiary {
             return JSON.parse(response);
         }
         catch(err){
-            return JSON.parse(err.error);
+            console.log(err);
+            return {error: err.error};
         }
     }
 
@@ -59,7 +62,8 @@ class Apiary {
             return JSON.parse(response);
         }
         catch(err){
-            return JSON.parse(err.error);
+            console.log(err);
+            return {error: err.error};
         }
     }
 }
